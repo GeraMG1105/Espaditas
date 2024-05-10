@@ -1,0 +1,20 @@
+@startuml espaditas
+
+class Juego
+class Jugador
+class Espada
+class Arena
+class Muro
+class Bamboo
+class Colisionable
+
+Jugador --|> Colisionable
+Muro --|> Colisionable
+Bamboo --|> Colisionable
+Jugador "1" --> "*" Espada : tiene
+Juego "1" --> "*" Jugador : contiene
+Juego "1" --> "1" Arena : tiene
+Arena "1" --> "*" Muro : contiene
+Arena "1" --> "*" Bamboo : contiene
+
+@enduml
