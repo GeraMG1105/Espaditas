@@ -1,6 +1,7 @@
 #include <iostream>
 #include <ftxui/dom/elements.hpp>
 #include <ftxui/screen/screen.hpp>
+#include <nube.hpp>
 #include <thread>  //Hilos de procesos
 #include <fstream> // COntrol de cadenas
 #include <string>  // control de cadenas
@@ -21,7 +22,8 @@ int main(int argc, char const *argv[])
         });
 
     //   Menu
-    auto cell = [](const char *t) { return paragraphAlignCenter(t) | border; };
+    auto cell = [](const char *t)
+    { return paragraphAlignCenter(t) | border; };
     auto menu =
         gridbox({
             {cell(" ⎞ ⚔ ⎛ "), cell("    JUGAR    "), cell(" ⎞ ⚔ ⎛ ")},
@@ -30,15 +32,14 @@ int main(int argc, char const *argv[])
         });
 
     auto titleScreen = Screen::Create(
-        Dimension::Full()  ,    // Width
-        Dimension::Fit(title)// Height
+        Dimension::Full(),    // Width
+        Dimension::Fit(title) // Height
     );
     Render(titleScreen, title);
-    
-   auto menuScreen = Screen::Create(
-      Dimension::Full(),
-      Dimension::Fit(menu)
-   ); 
+
+    auto menuScreen = Screen::Create(
+        Dimension::Full(),
+        Dimension::Fit(menu));
     titleScreen.Print();
 
     Render(menuScreen, menu);

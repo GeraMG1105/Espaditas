@@ -1,5 +1,5 @@
 #include <ftxui/dom/elements.hpp>
-#include <fstream> 
+#include <fstream>
 #include <string>
 
 using namespace std;
@@ -15,4 +15,3 @@ public:
     Arena(/* args */);
     ~Arena();
 };
-
