@@ -8,16 +8,11 @@ using namespace ftxui;
 class Jugador
 {
 private:
-    /* data */
+    int xpos;
+    int ypos;
+    string (color);
 public:
     Jugador(/* args */);
     ~Jugador();
 };
 
-Jugador::Jugador(/* args */)
-{
-}
-
-Jugador::~Jugador()
-{
-}

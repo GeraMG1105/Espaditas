@@ -8,16 +8,9 @@ using namespace ftxui;
 class Colisionable
 {
 private:
-    /* data */
+    bool colisonable;
 public:
     Colisionable(/* args */);
     ~Colisionable();
 };
 
-Colisionable::Colisionable(/* args */)
-{
-}
-
-Colisionable::~Colisionable()
-{
-}

@@ -8,16 +8,10 @@ using namespace ftxui;
 class Atravesable
 {
 private:
-    /* data */
+    bool atravesable;
 public:
     Atravesable(/* args */);
     ~Atravesable();
 };
 
-Atravesable::Atravesable(/* args */)
-{
-}
 
-Atravesable::~Atravesable()
-{
-}

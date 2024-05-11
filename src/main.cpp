@@ -10,37 +10,39 @@ using namespace ftxui;
 
 int main(int argc, char const *argv[])
 {
-using namespace ftxui;
+    using namespace ftxui;
 
     // Titulo
     Element title =
         hbox({
+            separator(),
             paragraphAlignCenter(" ⸸ᨃ⸙ᨏ⸙ᨑ⸙⸙ᨒ⸸    L A S   E S P A D I T A S    ⸸ᨃ⸙ᨏ⸙ᨑ⸙⸙ᨒ⸸ ") | border | flex,
+            separator(),
         });
 
     //   Menu
     auto cell = [](const char *t) { return paragraphAlignCenter(t) | border; };
-    auto menus =
-        vbox({
-           
-            separator(),
-            cell(" ⎞⚔⎛    JUGAR    ⎞⚔⎛ "),
-            separator(),
-            cell(" ⎞⚔⎛   AJUSTES   ⎞⚔⎛ "),
-            separator(),
-            cell(" ⎞⚔⎛    SALIR    ⎞⚔⎛ "),
-            separator(),
-           
+    auto menu =
+        gridbox({
+            {cell(" ⎞ ⚔ ⎛ "), cell("    JUGAR    "), cell(" ⎞ ⚔ ⎛ ")},
+            {cell(" ⎞ ⚔ ⎛ "), cell("   AJUSTES   "), cell(" ⎞ ⚔ ⎛ ")},
+            {cell(" ⎞ ⚔ ⎛ "), cell("    SALIR    "), cell(" ⎞ ⚔ ⎛ ")},
         });
 
-    auto screen = Screen::Create(
-        Dimension::Full(),     
-        Dimension::Fixed(7) 
+    auto titleScreen = Screen::Create(
+        Dimension::Full()  ,    // Width
+        Dimension::Fit(title)// Height
     );
-   ftxui::Render(screen, title);
-    screen.Print();
-   ftxui::Render(screen, menus);
-    screen.Print();
+    Render(titleScreen, title);
+    
+   auto menuScreen = Screen::Create(
+      Dimension::Full(),
+      Dimension::Fit(menu)
+   ); 
+    titleScreen.Print();
+
+    Render(menuScreen, menu);
+    menuScreen.Print();
 
     return EXIT_SUCCESS;
 }

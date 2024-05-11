@@ -50,19 +50,14 @@ public:
                 contenido=vbox(elementos);
                 asset.close();
                 break;
-
         default: 
         break;
-        }
-        
-
+        };
 
     }
-    
-
-
-
-
+     Element GetElement(){
+            return this->contenido;
+        }
     ~Bamboo();
 };
 

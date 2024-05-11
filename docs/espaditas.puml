@@ -18,10 +18,11 @@ Arena "1" *-- "*" Bamboo
 Arena "1" *-- "4" Espada
 Arena "1" *-- "1" Piso
 Arena "1" *-- "*" Jugador
-Jugador "1" *-- "1" Espada
+Piso "1" *-- "1" Bamboo
+
 
 Jugador o-- Bamboo
-Jugador o-- Espada
+Jugador  o-- Espada
 
 
 Bamboo <|-- Atravesable

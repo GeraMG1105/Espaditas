@@ -8,16 +8,10 @@ using namespace ftxui;
 class Espada
 {
 private:
-    /* data */
+    int xpos;
+    int ypos;
 public:
     Espada(/* args */);
     ~Espada();
 };
 
-Espada::Espada(/* args */)
-{
-}
-
-Espada::~Espada()
-{
-}

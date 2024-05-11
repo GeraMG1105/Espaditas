@@ -14,10 +14,4 @@ public:
     ~Piso();
 };
 
-Piso::Piso(/* args */)
-{
-}
 
-Piso::~Piso()
-{
-}

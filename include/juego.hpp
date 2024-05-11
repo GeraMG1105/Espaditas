@@ -8,16 +8,10 @@ using namespace ftxui;
 class Juego
 {
 private:
-    /* data */
+    bool gameOver;
 public:
     Juego(/* args */);
     ~Juego();
 };
 
-Juego::Juego(/* args */)
-{
-}
 
-Juego::~Juego()
-{
-}
